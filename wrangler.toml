@@ -1,0 +1,19 @@
+name = "torque"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".vercel/output/static"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "torque-db"
+database_id = "84bfb062-1716-4bb0-b43e-8e0791b2dba4"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "torque-media"
+
+[vars]
+NEXT_PUBLIC_SITE_NAME = "Torque"
+NEXT_PUBLIC_SITE_URL = "https://torque.torque1899.pages.dev"
+
+
