@@ -1,0 +1,15 @@
+# Torque Blog
+
+Torque is a modern, high-performance blogging platform optimized for speed, security, and developer productivity. It is built using Next.js and Cloudflare Pages.
+
+## Core Features
+- Full-featured blog with categories, tags, and comments.
+- Rich-text editor powered by TipTap.
+- Admin dashboard for post management, categories, and tags.
+- Secure authentication using JWT and password hashing.
+- High-performance Edge database (Cloudflare D1) and Media storage (Cloudflare R2).
+
+## APIs for Agents
+- GET /api/posts: List all public posts.
+- GET /api/categories: List all categories.
+- GET /api/tags: List all tags.

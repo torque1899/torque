@@ -1,0 +1,17 @@
+{
+  "name": "Torque Blog API",
+  "description": "A powerful, modern blogging platform built with Next.js and Cloudflare.",
+  "version": "1.0.0",
+  "capabilities": {
+    "posts": {
+      "list": true,
+      "read": true
+    },
+    "categories": {
+      "list": true
+    },
+    "tags": {
+      "list": true
+    }
+  }
+}

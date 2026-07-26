@@ -1,0 +1,25 @@
+{
+  "linkset": [
+    {
+      "anchor": "/",
+      "profile": "https://www.rfc-editor.org/rfc/rfc9727",
+      "item": [
+        {
+          "href": "/api/posts",
+          "type": "application/json",
+          "title": "Blog Posts API"
+        },
+        {
+          "href": "/api/categories",
+          "type": "application/json",
+          "title": "Categories API"
+        },
+        {
+          "href": "/api/tags",
+          "type": "application/json",
+          "title": "Tags API"
+        }
+      ]
+    }
+  ]
+}

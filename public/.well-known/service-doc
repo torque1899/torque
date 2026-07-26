@@ -1,0 +1,25 @@
+# Torque Blog Service Documentation
+
+Welcome to the machine-readable service documentation for Torque Blog.
+
+## Endpoints
+
+### 1. Posts API
+- **URL:** `/api/posts`
+- **Method:** `GET`
+- **Description:** Retrieve a list of blog posts.
+- **Parameters:**
+  - `limit` (number, optional) - Number of posts to return.
+  - `offset` (number, optional) - Number of posts to skip.
+  - `tag` (string, optional) - Filter posts by tag.
+  - `category` (string, optional) - Filter posts by category.
+
+### 2. Categories API
+- **URL:** `/api/categories`
+- **Method:** `GET`
+- **Description:** Retrieve a list of blog categories.
+
+### 3. Tags API
+- **URL:** `/api/tags`
+- **Method:** `GET`
+- **Description:** Retrieve a list of blog tags.

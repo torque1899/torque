@@ -17,9 +17,18 @@ export async function middleware(req: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+
+  if (pathname === '/') {
+    response.headers.set(
+      'Link',
+      '</.well-known/api-catalog>; rel="api-catalog", </.well-known/service-desc>; rel="service-desc", </.well-known/service-doc>; rel="service-doc", </llms.txt>; rel="describedby"'
+    );
+  }
+
+  return response;
 }
 
 export const config = {
-  matcher: ['/admin/:path*'],
+  matcher: ['/', '/admin/:path*'],
 };
