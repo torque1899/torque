@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { CommentSection } from '@/components/CommentSection';
 import type { Metadata } from 'next';
 
+export const runtime = 'edge';
+
 async function getPost(slug: string) {
   try {
     const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';

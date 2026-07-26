@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react';
 import PageForm from '@/components/PageForm';
 import { use } from 'react';
 
+export const runtime = 'edge';
+
 export default function EditPagePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
   const [page, setPage] = useState<any>(null);

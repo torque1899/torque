@@ -4,6 +4,8 @@ import { PostCard } from '@/components/PostCard';
 import { FolderOpen } from 'lucide-react';
 import type { Metadata } from 'next';
 
+export const runtime = 'edge';
+
 async function getCategory(slug: string) {
   try {
     const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
