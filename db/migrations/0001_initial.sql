@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS comments (
 -- Seed: default admin user (password: admin123 - change immediately!)
 -- Password hash for 'admin123' - generated with bcryptjs
 INSERT OR IGNORE INTO users (name, email, password_hash, role, created_at)
-VALUES ('Admin', 'admin@torque.local', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhu', 'admin', unixepoch());
+VALUES ('Admin', 'admin@torque.local', '$2b$10$onxElbuyUIXDcvldFds1sefitkQ9qbpOSAwcvsVa763Hn1bwtbKaW', 'admin', unixepoch());
 
 CREATE TABLE IF NOT EXISTS settings (
   key TEXT PRIMARY KEY,
