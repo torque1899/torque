@@ -66,7 +66,7 @@ export function Header({ navPages = [] }: { navPages?: NavPage[] }) {
           ) : (
             <Link href="/login" className="btn btn-primary btn-sm">Sign In</Link>
           )}
-          <button onClick={() => setOpen(!open)} className="mobile-menu-btn" style={{ background: 'none', border: 'none', color: 'var(--text)', cursor: 'pointer', display: 'none' }}>
+          <button onClick={() => setOpen(!open)} className="mobile-menu-btn" style={{ background: 'none', border: 'none', color: 'var(--text)', cursor: 'pointer', display: 'none' }} aria-label="Toggle menu navigation drawer">
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
