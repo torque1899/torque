@@ -4,8 +4,9 @@ import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import {
   LayoutDashboard, FileText, BookOpen, FolderOpen, Tags, MessageSquare,
-  Image as ImageIcon, Users, LogOut, Pen, ChevronLeft, ChevronRight, Settings
+  Image as ImageIcon, Users, LogOut, ChevronLeft, ChevronRight, Settings
 } from 'lucide-react';
+import Image from 'next/image';
 
 const navItems = [
   { href: '/admin', icon: LayoutDashboard, label: 'Dashboard', exact: true },
@@ -54,16 +55,12 @@ export function AdminNav() {
       }}>
         {!collapsed && (
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-            <div style={{ width: 32, height: 32, borderRadius: 8, background: 'linear-gradient(135deg, #6d28d9, #a78bfa)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-              <Pen size={15} color="white" />
-            </div>
+            <Image src="/favicon.ico" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
             <span style={{ fontWeight: 800, fontSize: '1.1rem', color: 'white', letterSpacing: '-0.02em' }}>Torque</span>
           </Link>
         )}
         {collapsed && (
-          <div style={{ width: 32, height: 32, borderRadius: 8, background: 'linear-gradient(135deg, #6d28d9, #a78bfa)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <Pen size={15} color="white" />
-          </div>
+          <Image src="/favicon.ico" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}

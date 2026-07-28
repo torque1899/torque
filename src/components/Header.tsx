@@ -1,9 +1,10 @@
 'use client';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Pen } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { AlertTicker } from './AlertTicker';
+import Image from 'next/image';
 
 interface NavPage {
   title: string;
@@ -41,13 +42,7 @@ export function Header({ navPages = [] }: { navPages?: NavPage[] }) {
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.875rem 1.5rem' }}>
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-          <div style={{
-            width: 36, height: 36, borderRadius: 10,
-            background: 'linear-gradient(135deg, #6d28d9, #a78bfa)',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-          }}>
-            <Pen size={18} color="white" />
-          </div>
+          <Image src="/favicon.ico" alt="Logo" width={32} height={32} style={{ objectFit: 'contain' }} />
           <span style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--text)', letterSpacing: '-0.02em' }}>
             Torque
           </span>

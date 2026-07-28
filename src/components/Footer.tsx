@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Pen, Rss } from 'lucide-react';
+import { Rss } from 'lucide-react';
+import Image from 'next/image';
 
 export function Footer() {
   return (
@@ -13,13 +14,7 @@ export function Footer() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
           <div>
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', marginBottom: '0.75rem' }}>
-              <div style={{
-                width: 32, height: 32, borderRadius: 8,
-                background: 'linear-gradient(135deg, #6d28d9, #a78bfa)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
-                <Pen size={15} color="white" />
-              </div>
+              <Image src="/favicon.ico" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
               <span style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text)' }}>Torque</span>
             </Link>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', lineHeight: 1.6 }}>
