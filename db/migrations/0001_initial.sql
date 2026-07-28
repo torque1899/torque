@@ -74,3 +74,10 @@ CREATE TABLE IF NOT EXISTS comments (
 -- Password hash for 'admin123' - generated with bcryptjs
 INSERT OR IGNORE INTO users (name, email, password_hash, role, created_at)
 VALUES ('Admin', 'admin@torque.local', '$2a$10$N9qo8uLOickgx2ZMRZoMyeIjZAgcfl7p92ldGxad68LJZdL17lhu', 'admin', unixepoch());
+
+CREATE TABLE IF NOT EXISTS settings (
+  key TEXT PRIMARY KEY,
+  value TEXT NOT NULL
+);
+
+INSERT OR IGNORE INTO settings (key, value) VALUES ('homepage', '{"alerts":["IGNOU June Term End Exam Assignment submission deadline extended","New Sarkari Job alerts: SBI PO and SSC CGL notifications out!"],"portals":[{"label":"IGNOU Official Website","href":"https://www.ignou.ac.in"},{"label":"IGNOU Student Samarth Portal","href":"https://ignou.samarth.edu.in"},{"label":"Online Exam Form Submission","href":"https://exam.ignou.ac.in"},{"label":"Revaluation Result Portal","href":"https://revaluation.ignou.ac.in"},{"label":"Sarkari Job Results Board","href":"https://www.sarkaripost.com"}],"checklist":[{"label":"June Term-End Assignments","status":"Active / Open","color":"#16a34a"},{"label":"June Term-End Examinations Form","status":"Extended / Open","color":"#16a34a"},{"label":"New Academic Cycle Admission","status":"Extended","color":"#b45309"},{"label":"Hall Ticket / Admit Card link","status":"Awaiting Link","color":"#d33"},{"label":"Grade Card Re-evaluation status","status":"Updated Daily","color":"#2563eb"}],"telegram":{"title":"Join Telegram Channel","description":"Get instant notifications on your mobile for IGNOU announcements, question sheets, syllabus releases, and Government Job Alerts.","channelUrl":"https://t.me/ignou_study_jobs"}}');

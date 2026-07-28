@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon, Pen } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
+import { AlertTicker } from './AlertTicker';
 
 interface NavPage {
   title: string;
@@ -85,6 +86,8 @@ export function Header({ navPages = [] }: { navPages?: NavPage[] }) {
           ))}
         </div>
       )}
+
+      <AlertTicker />
 
       <style>{`
         @media (max-width: 768px) {

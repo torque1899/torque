@@ -76,3 +76,10 @@ export type Page = typeof pages.$inferSelect;
 export type Category = typeof categories.$inferSelect;
 export type Tag = typeof tags.$inferSelect;
 export type Comment = typeof comments.$inferSelect;
+
+export const settings = sqliteTable('settings', {
+  key: text('key').primaryKey(),
+  value: text('value').notNull(),
+});
+
+export type Setting = typeof settings.$inferSelect;
