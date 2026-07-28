@@ -42,7 +42,7 @@ export function Header({ navPages = [] }: { navPages?: NavPage[] }) {
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.875rem 1.5rem' }}>
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-          <Image src="/favicon.ico" alt="Logo" width={32} height={32} style={{ objectFit: 'contain' }} />
+          <Image src="/favicon.webp" alt="Logo" width={32} height={32} style={{ objectFit: 'contain' }} />
           <span style={{ fontWeight: 800, fontSize: '1.25rem', color: 'var(--text)', letterSpacing: '-0.02em' }}>
             Torque
           </span>

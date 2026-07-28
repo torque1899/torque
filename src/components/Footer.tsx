@@ -14,7 +14,7 @@ export function Footer() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '2rem', marginBottom: '2rem' }}>
           <div>
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', marginBottom: '0.75rem' }}>
-              <Image src="/favicon.ico" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
+              <Image src="/favicon.webp" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
               <span style={{ fontWeight: 800, fontSize: '1.1rem', color: 'var(--text)' }}>Torque</span>
             </Link>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.875rem', lineHeight: 1.6 }}>

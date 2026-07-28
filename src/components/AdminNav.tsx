@@ -55,12 +55,12 @@ export function AdminNav() {
       }}>
         {!collapsed && (
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}>
-            <Image src="/favicon.ico" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
+            <Image src="/favicon.webp" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
             <span style={{ fontWeight: 800, fontSize: '1.1rem', color: 'white', letterSpacing: '-0.02em' }}>Torque</span>
           </Link>
         )}
         {collapsed && (
-          <Image src="/favicon.ico" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
+          <Image src="/favicon.webp" alt="Logo" width={28} height={28} style={{ objectFit: 'contain' }} />
         )}
         <button
           onClick={() => setCollapsed(!collapsed)}
