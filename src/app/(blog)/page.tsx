@@ -109,15 +109,10 @@ export default async function HomePage() {
       {/* SECTION 1: News Hero Spotlight Grid */}
       <section style={{ background: 'linear-gradient(180deg, var(--bg) 0%, var(--bg-secondary) 100%)', padding: '2rem 0' }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '1.5rem',
-            marginBottom: '2rem',
-          }}>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             
             {/* Lead Story (Left Column - Highlighted News) */}
-            <div style={{ gridColumn: 'span 2', display: 'flex' }}>
+            <div className="lg:col-span-2 flex">
               {featuredPost ? (
                 <div style={{
                   background: 'var(--bg-card)',
@@ -290,7 +285,7 @@ export default async function HomePage() {
             <span style={{ fontSize: '0.85rem', fontWeight: 800, textTransform: 'uppercase', color: 'var(--text-muted)', whiteSpace: 'nowrap' }}>
               Explore Categories:
             </span>
-            <div style={{ display: 'flex', gap: '0.75rem' }}>
+            <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
               {categories.map((c: any) => (
                 <Link 
                   key={c.slug} 
@@ -323,14 +318,10 @@ export default async function HomePage() {
       {/* SECTION 3: Dashboard - Dual Column News Desk + Resource Sidebar */}
       <section>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(12, 1fr)',
-            gap: '1.5rem',
-          }}>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
             {/* LEFT COLUMN: News Desks (IGNOU updates + Jobs alerts) */}
-            <div style={{ gridColumn: 'span 8', display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            <div className="lg:col-span-8" style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               
               {/* DESK 1: IGNOU Updates & Study Materials */}
               <div style={{
@@ -510,7 +501,7 @@ export default async function HomePage() {
             </div>
             
             {/* RIGHT COLUMN: Sidebar (Resources, Quick Links, and Community Widgets) */}
-            <div style={{ gridColumn: 'span 4', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+            <div className="lg:col-span-4" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               
               {/* SIDEBAR WIDGET 1: Student Quick Access Portals */}
               <div style={{
