@@ -1,15 +1,18 @@
-# Torque Blog
+# Torque Blog & Portal
 
-Torque is a modern, high-performance blogging platform optimized for speed, security, and developer productivity. It is built using Next.js and Cloudflare Pages.
+Torque is a modern, high-performance blogging and educational news portal optimized for speed, security, and developer productivity. It is built using Next.js (App Router) and Cloudflare Pages.
 
 ## Core Features
-- Full-featured blog with categories, tags, and comments.
-- Rich-text editor powered by TipTap.
-- Admin dashboard for post management, categories, and tags.
-- Secure authentication using JWT and password hashing.
-- High-performance Edge database (Cloudflare D1) and Media storage (Cloudflare R2).
+- **Educational News & Career Dashboard**: Homepage layout featuring Lead Spotlight updates, Category explore strips, IGNOU Study Desk, Sarkari Job Opportunity boards, and quick resource sidebars.
+- **Dynamic Config Settings**: Settings engine backed by SQLite (D1) database, allowing administrators to live-configure marquee tickers, action checklists, sidebar links, and Telegram social cards.
+- **File & Media Uploader**: Secure uploader (Cloudflare R2) supporting images, PDFs, Word documents (.doc, .docx), and ZIP archives up to 10MB for sharing syllabus files and resources.
+- **Full-featured CMS**: Rich editor with full-featured dashboards to manage posts, tags, categories, media uploads, and comments.
+- **Secure Authentication**: JWT-based session tokens stored in secure, HttpOnly cookies verified on the Cloudflare Edge.
 
-## APIs for Agents
-- GET /api/posts: List all public posts.
-- GET /api/categories: List all categories.
-- GET /api/tags: List all tags.
+## APIs for Agents & Clients
+- `GET /api/posts`: List published posts. Optional query filters: `?category=slug`, `?tag=slug`, `?limit=N`.
+- `GET /api/categories`: List all categories.
+- `GET /api/tags`: List all tags.
+- `GET /api/settings?key=homepage`: Fetch active homepage configurations (alerts, portals, checklist, telegram).
+- `PUT /api/settings?key=homepage`: Update homepage configurations (requires Admin role authentication).
+- `POST /api/upload`: Upload files to Cloudflare R2 (images, PDFs, DOC/DOCX, ZIP) up to 10MB.
