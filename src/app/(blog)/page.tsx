@@ -7,6 +7,9 @@ import Image from 'next/image';
 export const metadata: Metadata = {
   title: 'IGNOU Study Hub & Sarkari Job Alerts | Torque News',
   description: 'Latest IGNOU announcements, study materials, notes, assignments, and Government job notifications.',
+  icons: {
+    icon: "/favicon.webp",
+  },
 };
 
 async function getPosts(limit = 30) {
